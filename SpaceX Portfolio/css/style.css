@@ -1,0 +1,306 @@
+/* Main css skeleton beauty thingy*/
+article, header, nav, section, aside, footer, .container {
+  border: 2px inset grey;
+  padding: 10px;
+  margin: 5px;
+  /*font-family: Arial, sans-serif; */
+  color: #555555;
+  box-sizing: border-box;
+  color: white;
+  border-radius: 50px 20px;
+  font-family: 'Exo', sans-serif;
+  text-shadow: 2px 2px 4px #000000;
+}
+
+header h1 {
+  margin: 0;
+  padding: 0;
+}
+
+header{
+  /*background-image: url(../images/connectwork.png); - Use this if don't want animation header from below*/ 
+  border-style: solid;
+  border-color: purple;
+  font-size: ;
+
+  /*------------------------------animated border code----------------------------------------------------*/
+  /*background: linear-gradient(45deg,blueviolet,purple);*/
+  background-color: blueviolet;
+  height: 150px;
+  color: #fff;
+  padding: 8px;
+  padding-bottom: 25px; 
+  display: ;
+  flex-direction: row ;
+  justify-content:  ;
+  text-align:  ;
+  position: relative;
+  overflow: hidden; 
+}
+
+header:before,
+header:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 25px; 
+  height: 50px; 
+  background: radial-gradient(closest-side, #fff, blueviolet 50%, transparent 50%);
+
+  background-size: 50px 50px; 
+  background-position: 0 25px; 
+  background-repeat: repeat-x;
+}
+
+header:after {
+  background: radial-gradient(closest-side,#fff,blueviolet 50%,transparent 50%);
+  
+  
+  background-size: 50px 50px; 
+  background-position: 25px -25px; 
+  background-repeat: repeat-x;
+  bottom: -25px;
+}
+
+header.animatedWave:before,
+header.animatedWave:after {
+  left: -50px; 
+  animation: animateWave 0.6s linear infinite;
+}
+
+
+@keyframes animateWave {
+  to {
+    transform: translateX(50px);
+  }
+} 
+
+/*---------------------------------------------------------------------------------------------------------- */
+section {
+  border-style: solid;
+  border-color: plum;
+  background: linear-gradient(45deg,blueviolet,purple);
+}
+footer {
+  border-style: solid;
+  border-color: grey;
+  text-align: center;
+  background-image: url(../images/connectwork.png);
+}
+aside {
+  border-style: solid;
+  border-color: plum;
+  background: linear-gradient(45deg,blueviolet,purple);
+}
+article {
+  border-style: solid;
+  border-color: plum;
+  background: linear-gradient(45deg,blueviolet,purple)
+}
+nav {
+  border-style: solid;
+  border-color: purple;
+  background: linear-gradient(45deg,blueviolet,purple)
+  
+
+}
+
+body {
+  background-image: url(../images/nebula.jpg);
+}
+
+/*-----------------------------------------------------------------------------------------------------*/
+
+/* Layoutstyles */
+#logo {
+  width: 100px;
+  align-self: left ;
+  margin-left: 30px;
+}
+
+#title {
+  font-size: 3em;
+  position: relative;
+  bottom: 25px;
+  margin-left: 20px;
+}
+
+header nav {
+  float:right;
+}
+
+nav ul li {
+  display: inline-block;
+  margin-left: 16px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+}
+
+nav ul li a:active {
+  color: red;
+}
+
+nav ul {
+  padding-left: 0;
+}
+
+article {
+  width: 500px;
+  float:left;
+}
+
+aside {
+  width: 200px;
+  float: right;
+}
+
+footer {
+  clear:both;
+}
+
+/* GRID GALLERY */
+
+.gallery{
+  margin: 20px ;
+  position: absolute;
+  top: 460px;
+  right: 20px;
+  display:grid;
+  grid-template-columns: 150px 150px;
+  grid-column-gap: 25px;
+  grid-row-gap: 25px;
+
+}
+  .box{
+    background-color:#333;
+    padding:20px;
+    border-radius:20px;
+    color:#fff;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:40px;
+    font-family:sans-serif;
+    width: 120px;
+    height: 100px;
+
+  }
+
+  .box img {
+    width:150px;
+    height:120px;
+    border-radius:20px;
+
+  }
+
+
+/*---------------------------------------Main Header Article/section/etc----------------------------------*/
+.main{
+  /*background-image: url(../images/connectwork.png);*/
+  border-style: solid;
+  border-color: purple;
+  background: linear-gradient(45deg,blueviolet,purple);
+  border-radius: 50px 20px;
+  text-align: center;
+}
+/*---------------------------------------------------------------------------------------------------------*/
+/* Extras & Etc */
+
+.container {
+  width: 750px;
+  margin: 0 auto;
+  background-image: url(../images/connectwork.png);
+}
+
+
+.footerextra {
+  border-color: black;
+}
+
+.video {
+  position: absolute;
+  top: 200px;
+  right: 30px;
+  border-style: solid;
+  border-color: plum;
+  background: linear-gradient(45deg,blueviolet,purple);
+}
+
+.footerextra {
+  border-color: transparent;
+}
+
+.music {
+  margin: 20px;
+  position: absolute;
+  top: 780px;
+  right: 30px;
+  border-style: dashed;
+  border-color: plum;
+  border-radius:20px;
+  background: linear-gradient(45deg,blueviolet,purple);
+  padding-top: 10px;
+}
+
+/*----------------------------------------size test-------------------------------------------------*/
+/*The following CSS runs only for displays with a width (in pixels) of more than 800px*/
+
+@media screen and (max-width: 800px) { 
+    head {
+        margin:100px;
+    }
+}
+
+@media screen and (max-width: 800px) { 
+    body {
+        margin:100px;
+    }
+}
+
+@media screen and (max-width: 800px) { 
+     header {
+        margin:100px;
+    }
+}
+
+@media screen and (max-width: 800px) { 
+    article {
+        margin:100px;
+    }
+}
+
+@media screen and (max-width: 800px) { 
+    section {
+        margin:100px;
+    }
+}
+
+@media screen and (max-width: 800px) { 
+    aside {
+        margin:100px;
+    }
+}
+
+@media screen and (max-width: 800px) { 
+    footer {
+        margin:100px;
+    }
+}
+
+
+/*@media (min-width: 992px) {
+  body {
+    padding-top: 0;
+    padding-bottom: 0;
+    border-bottom: none;
+    background-color: transparent;
+    -webkit-transition: background-color 0.3s ease-in-out;
+    transition: background-color 0.3s ease-in-out;
+  }
+  */
+
+  /*----------------------------------------------------------------------------------------------*/
